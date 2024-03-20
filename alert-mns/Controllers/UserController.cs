@@ -28,12 +28,12 @@ namespace alert_mns.Controllers
                 User user = new User
                 {
                     Id = Convert.ToInt32(row["id"]),
-                    LastName = Convert.ToString(row["lastName"]),
-                    FirstName = Convert.ToString(row["firstName"]),
+                    LastName = Convert.ToString(row["last_name"]),
+                    FirstName = Convert.ToString(row["first_name"]),
                     Email = Convert.ToString(row["email"]),
                     Password = Convert.ToString(row["password"]),
-                    CreationDate = Convert.ToDateTime(row["creationDate"]),
-                    ConnectionDate = Convert.ToDateTime(row["connectionDate"]),
+                    CreationDate = Convert.ToDateTime(row["creation_date"]),
+                    ConnectionDate = Convert.ToDateTime(row["connection_date"]),
                     Status = Convert.ToBoolean(row["status"])
                 };
                 users.Add(user);
@@ -52,12 +52,12 @@ namespace alert_mns.Controllers
             User user = new User
             {
                 Id = Convert.ToInt32(row["id"]),
-                LastName = Convert.ToString(row["lastName"]),
-                FirstName = Convert.ToString(row["firstName"]),
+                LastName = Convert.ToString(row["last_name"]),
+                FirstName = Convert.ToString(row["first_name"]),
                 Email = Convert.ToString(row["email"]),
                 Password = Convert.ToString(row["password"]),
-                CreationDate = Convert.ToDateTime(row["creationDate"]),
-                ConnectionDate = Convert.ToDateTime(row["connectionDate"]),
+                CreationDate = Convert.ToDateTime(row["creation_date"]),
+                ConnectionDate = Convert.ToDateTime(row["connection_date"]),
                 Status = Convert.ToBoolean(row["status"])
             };
             return Ok(user);
@@ -69,7 +69,7 @@ namespace alert_mns.Controllers
         {
             try
             {
-                string query = $"INSERT INTO user (lastName, firstName, email, password, status) VALUES ('{user.LastName}', '{user.FirstName}', '{user.Email}', '{user.Password}', '{user.Status}');";
+                string query = $"INSERT INTO user (last_name, first_name, email, password, status) VALUES ('{user.LastName}', '{user.FirstName}', '{user.Email}', '{user.Password}', '{user.Status}');";
 
                 // Exécution de la requête
                 _sqlConnection.ExecuteNonQuery(query);
