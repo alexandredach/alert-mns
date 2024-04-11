@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  alert-mns:
+    networks:
+      - alertmns-network
+    image: ${DOCKER_REGISTRY-}alertmns
+    build:
+      context: .
+      dockerfile: alert-mns/Dockerfile
+    depends_on:
+      - mysql
+
+  mysql:
+    networks:
+      - alertmns-network
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3308:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./alert-mns/DataAccess/DbContext/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  mysql_data:
+
+networks:
+  alertmns-network:
+    driver: bridge
