@@ -17,7 +17,11 @@
 
   <ItemGroup>
     <Folder Include="DataAccess\Repositories\" />
-    <Folder Include="wwwroot\lib\bootstrap\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\bootstrap\css\style.css" />
+    <None Include="wwwroot\lib\img\AlertMNS-logo.svg" />
   </ItemGroup>
 
 </Project>

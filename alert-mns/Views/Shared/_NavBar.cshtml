@@ -1,18 +1,71 @@
-﻿<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/home/index">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Categories</a>
-                </li>
-            </ul>
+﻿<nav class="navbar navbar-expand-lg bg-darkblue" style="width: 20%">
+    <div class="d-flex flex-column h-100" >
+        <div class="p-3 mb-2">
+            <div class="d-flex justify-content-center">
+                <img src="~/lib/img/AlertMNS-logo.svg" class="img-fluid" alt="Logo AlertMNS">
+            </div>
+        </div>
+        <div class="flex-grow-1">
+            <div>
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#salonsCollapse" aria-expanded="false">
+                    Salons
+                </a>
+                <div class="collapse" id="salonsCollapse">
+                    <ul class="list-unstyled ps-3">
+                        <li><a class="dropdown-item" href="#">Secrétariat</a></li>
+                        <li><a class="dropdown-item" href="#">Ressources Humaines</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#chatsCollapse" aria-expanded="false">
+                    Discussions privées
+                </a>
+                <div class="collapse" id="chatsCollapse">
+                    <ul class="list-unstyled ps-3">
+                        <li><a class="dropdown-item" href="#">Stéphanie BONNE</a></li>
+                        <li><a class="dropdown-item" href="#">Franck QUIRIN</a></li>
+                        <li><a class="dropdown-item" href="#">Théo GAMORY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#organizerCollapse" aria-expanded="false">
+                    Agenda
+                </a>
+                <div class="collapse" id="organizerCollapse">
+                    <ul class="list-unstyled ps-3">
+                        <li><a class="dropdown-item" href="#">Planifier une réunion</a></li>
+                        <li><a class="dropdown-item" href="#">Consulter l'agenda</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#adminCollapse" aria-expanded="false">
+                    Administration
+                </a>
+                <div class="collapse" id="adminCollapse">
+                    <ul class="list-unstyled ps-3">
+                        <li><a class="dropdown-item" href="#">Gestion des utilisateurs</a></li>
+                        <li><a class="dropdown-item" href="#">Gestion de l'organisation</a></li>
+                        <li><a class="dropdown-item" href="#">Gestion des services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <img src="~/lib/img/user_circle.svg" id="user-img" class="rounded-circle" alt="User">
+                </div>
+                <div>
+                    <p class="mb-0">John DOE</p>
+                    <p class="mb-0">Responsable RH</p>
+                </div>
+                <div>
+                    <a href="/Paramètres"><i class="fa fa-cog"></i></a>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
