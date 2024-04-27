@@ -4,8 +4,28 @@
     justify-content: center;
 }
 
+body {
+    display: flex;
+}
+
+p {
+    color: white;
+}
+
+.main-container {
+    height: 100%;
+    padding: 25px 30px 0px 22%;
+}
+
 .navbar {
     height: 100vh;
+    width: 400px;
+    color: #fff;
+    position: fixed;
+}
+
+#menu-user-fullname {
+    padding-left: 15px;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -13,26 +33,56 @@
     background-color: #007bff;
 }
 
-.main-container {
-    position: absolute;
-    display: flex;
-    left: 20%;
-    width: 80%;
-    height: 100vh;
+.menu-section-first {
+    margin: 10px 15px 0px 15px;
+    padding: 5px 0px 5px 10px;
+    background-color: #505467;
+    border-radius: 10px;
+}
+
+.menu-section-second {
+    margin-top: 5px;
+}
+
+.menu-section-second > ul > li {
+    padding: 5px 15px;
+}
+
+.menu-section-third > ul > li {
+    padding: 0px 20px;
+}
+
+.img-arrow-white {
+    float: right;
+    transition: transform 0.3s;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+#icon-channel {
+    width: 38px;
+    margin-right: 10px;
+}
+
+#icon-chat {
+    width: 40px;
+    margin-right: 10px
+}
+
+#icon-user {
+    width: 55px;
+}
+
+#icon-parameters {
+    width: 40px;
+    margin-left: auto;
 }
 
 .flex-grow-1 {
     flex-grow: 1;
     overflow: auto;
-}
-
-.navbar {
-    color: #fff;
-    font-weight: bold;
-}
-
-#user-img {
-    fill: white;
 }
 
 /*suppression d'une marge provoquée par bootstrap.css*/
@@ -45,7 +95,6 @@
 .container-sm {
     --bs-gutter-x: 0;
 }
-
 
 .menu-main {
     position: fixed;
@@ -114,7 +163,7 @@ button.btn-primary:hover {
     background-color: #FB8252; 
 }
 
-a {
+li > a {
     margin-top: 20px;
     text-decoration: none;
     color: white;
@@ -124,8 +173,3 @@ a:hover {
     color: #FB8252;
     transition: 300ms;
 }
-
-/*.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    color: #fff;
-    background-color: #007bff;
-}*/

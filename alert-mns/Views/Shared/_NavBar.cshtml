@@ -1,39 +1,59 @@
 ﻿<nav class="navbar navbar-expand-lg bg-darkblue" style="width: 20%">
     <div class="d-flex flex-column h-100" >
         <div class="p-3 mb-2">
-            <div class="d-flex justify-content-center">
-                <img src="~/lib/img/AlertMNS-logo.svg" class="img-fluid" alt="Logo AlertMNS">
+            <div class="d-flex">
+                <a href="#">
+                    <img src="~/lib/img/AlertMNS-logo.svg" class="img-fluid" alt="Logo AlertMNS">
+                </a>
             </div>
         </div>
-        <div class="flex-grow-1">
+        <div id="" class="flex-grow-1">
             <div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#salonsCollapse" aria-expanded="false">
+                <a class="nav-link collapsed menu-section-first rotatable" href="#" data-bs-toggle="collapse" data-bs-target="#salonsCollapse" aria-expanded="false">
                     Salons
+                    <img class="img-arrow-white" src="~/lib/img/arrow-expand-white.png"/>
                 </a>
-                <div class="collapse" id="salonsCollapse">
+                <div class="collapse menu-section-second" id="salonsCollapse">
                     <ul class="list-unstyled ps-3">
-                        <li><a class="dropdown-item" href="#">Secrétariat</a></li>
-                        <li><a class="dropdown-item" href="#">Ressources Humaines</a></li>
+                        <li>
+                            <a class="dropdown-item-inline" href="#"><img id="icon-channel" src="~/lib/img/icon-channel.png" alt="Icône de salon de discussion"></a>
+                            <a class="dropdown-item-inline" href="#">Secrétariat</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item-inline" href="#"><img id="icon-channel" src="~/lib/img/icon-channel.png" alt="Icône de salon de discussion"></a>
+                            <a class="dropdown-item-inline" href="#">Ressources Humaines</a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#chatsCollapse" aria-expanded="false">
+                <a class="nav-link collapsed menu-section-first rotatable" href="#" data-bs-toggle="collapse" data-bs-target="#chatsCollapse" aria-expanded="false">
                     Discussions privées
+                    <img class="img-arrow-white" src="~/lib/img/arrow-expand-white.png"/>
                 </a>
-                <div class="collapse" id="chatsCollapse">
+                <div class="collapse menu-section-second" id="chatsCollapse">
                     <ul class="list-unstyled ps-3">
-                        <li><a class="dropdown-item" href="#">Stéphanie BONNE</a></li>
-                        <li><a class="dropdown-item" href="#">Franck QUIRIN</a></li>
-                        <li><a class="dropdown-item" href="#">Théo GAMORY</a></li>
+                        <li>
+                            <a class="dropdown-item-inline" href="#"><img id="icon-chat" src="~/lib/img/icon-user.png" alt="Image de l'utilisateur'"></a>
+                            <a class="dropdown-item-inline" href="#">Stéphanie BONNE</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item-inline" href="#"><img id="icon-chat" src="~/lib/img/icon-user.png" alt="Image de l'utilisateur'"></a>
+                            <a class="dropdown-item-inline" href="#">Franck QUIRIN</a>
+                            </li>
+                        <li>
+                            <a class="dropdown-item-inline" href="#"><img id="icon-chat" src="~/lib/img/icon-user.png" alt="Image de l'utilisateur'"></a>
+                            <a class="dropdown-item-inline" href="#">Théo GAMORY</a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#organizerCollapse" aria-expanded="false">
+                <a class="nav-link collapsed menu-section-first rotatable" href="#" data-bs-toggle="collapse" data-bs-target="#organizerCollapse" aria-expanded="false">
                     Agenda
+                    <img class="img-arrow-white" src="~/lib/img/arrow-expand-white.png"/>
                 </a>
-                <div class="collapse" id="organizerCollapse">
+                <div class="collapse menu-section-third" id="organizerCollapse">
                     <ul class="list-unstyled ps-3">
                         <li><a class="dropdown-item" href="#">Planifier une réunion</a></li>
                         <li><a class="dropdown-item" href="#">Consulter l'agenda</a></li>
@@ -41,10 +61,11 @@
                 </div>
             </div>
             <div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#adminCollapse" aria-expanded="false">
+                <a class="nav-link collapsed menu-section-first rotatable" href="#" data-bs-toggle="collapse" data-bs-target="#adminCollapse" aria-expanded="false">
                     Administration
+                    <img class="img-arrow-white" src="~/lib/img/arrow-expand-white.png"/>
                 </a>
-                <div class="collapse" id="adminCollapse">
+                <div class="collapse menu-section-third" id="adminCollapse">
                     <ul class="list-unstyled ps-3">
                         <li><a class="dropdown-item" href="#">Gestion des utilisateurs</a></li>
                         <li><a class="dropdown-item" href="#">Gestion de l'organisation</a></li>
@@ -53,18 +74,16 @@
                 </div>
             </div>
         </div>
-        <div class="p-3">
-            <div class="d-flex justify-content-between align-items-center">
-                <div>
-                    <img src="~/lib/img/user_circle.svg" id="user-img" class="rounded-circle" alt="User">
+        <div class="p-3 d-flex justify-content-between">
+            <div class="d-flex align-items-center">
+                <img src="~/lib/img/icon-user.png" id="icon-user" class="rounded-circle" alt="Icône utilisateur">
+                <div id="menu-user-fullname">
+                    <p class="mb-0 fw-bold">John DOE</p>
+                    <p class="mb-0 fw-light fst-italic">Responsable RH</p>
                 </div>
-                <div>
-                    <p class="mb-0">John DOE</p>
-                    <p class="mb-0">Responsable RH</p>
-                </div>
-                <div>
-                    <a href="/Paramètres"><i class="fa fa-cog"></i></a>
-                </div>
+            </div>
+            <div class="align-self-center">
+                <a href="/Paramètres"><img id="icon-parameters" src="~/lib/img/icon-parameters.png" alt="Icône de paramètres"></a>
             </div>
         </div>
     </div>
