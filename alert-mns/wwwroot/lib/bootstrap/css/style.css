@@ -22,6 +22,7 @@ p {
     width: 400px;
     color: #fff;
     position: fixed;
+    padding: 0;
 }
 
 #menu-user-fullname {
@@ -124,6 +125,10 @@ p {
     background-color: #151B36;
 }
 
+.bg-menu {
+    background-color: #505467 !important;
+}
+
 #logo-alertmns {
     width: 500px;
 }
@@ -165,6 +170,11 @@ button.btn-primary:hover {
 
 li > a {
     margin-top: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.white-link {
     text-decoration: none;
     color: white;
 }
