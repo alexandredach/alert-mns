@@ -49,8 +49,38 @@ p {
     padding: 5px 15px;
 }
 
+.menu-section-second > ul > li:hover {
+    background-color: #505467;
+    border-radius: 10px;
+    margin: 0 15px 0 0;
+    transition: 150ms;
+}
+
 .menu-section-third > ul > li {
     padding: 0px 20px;
+}
+
+.menu-section-third > ul > li:hover {
+    background-color: #505467;
+    border-radius: 10px;
+    margin: 0 15px 0 0;
+    transition: 150ms;
+}
+
+ul > li > a {
+    margin: 10px 0 10px 0;
+    text-decoration: none;
+    color: white;
+}
+
+.home-password-link {
+    text-decoration: none !important;
+    color: white;
+}
+
+.home-password-link:hover {
+    color: #FB8252;
+    transition: 300ms;
 }
 
 .img-arrow-white {
@@ -166,20 +196,4 @@ button.btn-primary {
 
 button.btn-primary:hover {
     background-color: #FB8252; 
-}
-
-li > a {
-    margin-top: 20px;
-    text-decoration: none;
-    color: white;
-}
-
-.white-link {
-    text-decoration: none;
-    color: white;
-}
-
-a:hover {
-    color: #FB8252;
-    transition: 300ms;
 }
