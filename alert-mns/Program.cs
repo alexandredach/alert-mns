@@ -1,5 +1,10 @@
 // Add DI (Dependency Injection) - AddService
+using Microsoft.AspNetCore.Hosting;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure Kestrel server options
+builder.WebHost.UseUrls("http://*:5084"); // Écoute sur toutes les interfaces réseau
 
 builder.Services.AddControllersWithViews();
 

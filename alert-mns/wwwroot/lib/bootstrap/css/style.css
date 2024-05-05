@@ -4,25 +4,24 @@
     justify-content: center;
 }
 
-body {
-    display: flex;
+/* margin bottom 120px for message box */
+.main-container {
+    padding: 25px 30px 120px 350px;
 }
 
 p {
     color: white;
 }
 
-.main-container {
-    height: 100%;
-    padding: 25px 30px 0px 22%;
-}
-
 .navbar {
-    height: 100vh;
-    width: 400px;
+    height: 100%;
+    width: 310px;
     color: #fff;
     position: fixed;
     padding: 0;
+    left: 0;
+    overflow: auto;
+    transition: all 0.3s ease;
 }
 
 #menu-user-fullname {
@@ -127,13 +126,6 @@ ul > li > a {
     --bs-gutter-x: 0;
 }
 
-.menu-main {
-    position: fixed;
-    height: 100%;
-    width: 20%;
-    left: 0;
-}
-
 .centered {
     display: flex;
     align-items: center;
@@ -184,6 +176,30 @@ ul > li > a {
     align-items: center;
 }
 
+.img-burger {
+    width: 30px;
+    height: 30px;
+}
+
+.button-burger {
+    width: 45px;
+    height: 45px;
+    display: none;
+    cursor: pointer;
+}
+
+.img-close {
+    width: 30px;
+    height: 30px;
+}
+
+.button-close {
+    width: 35px;
+    height: 35px;
+    display: none;
+    cursor: pointer;
+}
+
 button.btn-primary {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -196,4 +212,28 @@ button.btn-primary {
 
 button.btn-primary:hover {
     background-color: #FB8252; 
+}
+/*TODO BOUTON CLOSE JS KO */
+@media (max-width: 1024px) {
+    .button-burger {
+        display: block;
+    }
+
+    .button-close {
+        display: block;
+    }
+    
+    .navbar {
+        left: -576px;
+    }
+    
+    .main-container {
+        padding: 25px 30px 120px 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        width: 100%;
+    }
 }
