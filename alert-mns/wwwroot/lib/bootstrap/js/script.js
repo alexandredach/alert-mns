@@ -31,4 +31,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             navbar.style.left = "0px";
         }
     });
+
+    document.querySelectorAll('h1').forEach(function (h1) {
+        let text = h1.textContent;
+        h1.textContent = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+    });
 });
