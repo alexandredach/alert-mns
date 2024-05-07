@@ -1,6 +1,6 @@
 ﻿namespace alert_mns.Entities
 {
-    public class Function
+    public class Position
     {
         public int Id { get; set; }
         public string Name { get; set; }

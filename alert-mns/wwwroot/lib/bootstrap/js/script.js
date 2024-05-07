@@ -5,6 +5,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
+    window.addEventListener('resize', function () {
+        var navbar = document.querySelector('.navbar');
+        if (window.innerWidth > 1024) {
+            navbar.style.left = "0px";
+        } else {
+            navbar.style.left = "-576px";
+        }
+    });
+
     document.querySelector('.button-burger').addEventListener('click', function () {
         var navbar = document.querySelector('.navbar');
         if (navbar.style.left === "-576px") {
