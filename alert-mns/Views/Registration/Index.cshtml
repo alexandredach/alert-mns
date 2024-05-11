@@ -1,4 +1,8 @@
-﻿<div class="container-fluid bg-lightblue main-container">
+﻿@{
+    ViewData["Title"] = "Enregistrement";
+}
+
+<div class="container-fluid bg-lightblue main-container">
     <div class="main-header bg-lightblue">
         <a class="button-burger">
             <img src="~/lib/img/burger-menu-w.svg" class="img-burger" alt="Image menu" />
@@ -8,50 +12,55 @@
             <img src="~/lib/img/notifications-white.svg" class="img-notifications" alt="Image des notifications" />
         </a>
     </div>
-    <div class="row d-flex justify-content-center">
-        <p>Veuillez renseigner les données de l'utilisateur</p>
-    </div>
-    <div class="row container-fluid">
-        <div class="col text-light">
-            <form id="form-registration" action="/votre-action-de-validation" method="POST">
-                <div class="mb-3 w-50">
-                    <label for="lastname">Nom</label>
-                    <input type="text" class="form-control" id="lastname" name="lastname">
+    <div class ="container-registration">
+        <div>
+            <div class="row d-flex justify-content-center">
+                <p>Veuillez renseigner les données de l'utilisateur</p>
+            </div>
+            <div class="row">
+                <div class="col text-light">
+                    <form id="form-registration" action="/votre-action-de-validation" method="POST">
+                        <div class="mb-3 w-50">
+                            <label for="lastname">Nom</label>
+                            <input type="text" class="form-control" id="lastname" name="lastname">
+                        </div>
+                        <div class="mb-3 w-50">
+                            <label for="firstname">Prénom</label>
+                            <input type="text" class="form-control" id="firstname" name="firstname">
+                        </div>
+                        <div class="mb-3 w-50">
+                            <label for="email">Adresse e-mail</label>
+                            <input type="text" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="mb-3 w-50">
+                            <label for="organization-select">Organisation</label><br />
+                            <select name="organization-select" id="organization">
+                                <option value="">--Choisir une organisation--</option>
+                                <option value="IFA">IFA</option>
+                                <option value="MNS">Metz Numeric School</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 w-50">
+                            <label for="role-select">Rôle</label><br />
+                            <select name="role-select" id="role">
+                                <option value="">--Choisir un rôle--</option>
+                                <option value="responsable-rh">Responsable RH</option>
+                                <option value="assistant-rh">Assistant RH</option>
+                                <option value="responsable-formation">Responsable formation</option>
+                                <option value="formateur">Formateur</option>
+                                <option value="assistant-administratif">Assistant administratif</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-secondary">Annuler</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="mb-3 w-50">
-                    <label for="firstname">Prénom</label>
-                    <input type="text" class="form-control" id="firstname" name="firstname">
-                </div>
-                <div class="mb-3 w-50">
-                    <label for="email">Adresse e-mail</label>
-                    <input type="text" class="form-control" id="email" name="email">
-                </div>
-                <div class="mb-3 w-50">
-                    <label for="organization-select">Organisation*</label>
-                    <select name="organization-select" id="organization">
-                        <option value="">--Choisir une organisation--</option>
-                        <option value="IFA">IFA</option>
-                        <option value="MNS">Metz Numeric School</option>
-                    </select>
-                </div>
-                <div class="mb-3 w-50">
-                    <label for="role-select">Rôle</label>
-                    <select name="role-select" id="role">
-                        <option value="">--Choisir un rôle--</option>
-                        <option value="responsable-rh">Responsable RH</option>
-                        <option value="assistant-rh">Assistant RH</option>
-                        <option value="responsable-formation">Responsable formation</option>
-                        <option value="formateur">Formateur</option>
-                        <option value="assistant-administratif">Assistant administratif</option>
-                    </select>
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-primary">Enregistrer</button>
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-secondary">Annuler</button>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
+    
 </div>

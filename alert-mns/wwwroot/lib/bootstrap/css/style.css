@@ -30,6 +30,7 @@ Jump to sorted CSS elements by searching these keywords :
 /* margin bottom 120px for message box */
 .main-container {
     padding: 0px 30px 120px 350px;
+    height: 100%;
 }
 
 .main-header {
@@ -40,6 +41,7 @@ Jump to sorted CSS elements by searching these keywords :
     top: 0;
     z-index: 9;
     padding-top: 13px;
+    height: 10%;
 }
 
 h1 {
@@ -263,6 +265,24 @@ button.btn-primary:hover {
     font-weight: bold;
     font-size: larger;
 }
+
+/*-----------------REGISTRATION PAGE-----------------*/
+.container-registration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 10%);
+}
+
+#form-registration > div > input {
+    width: 300px;
+}
+
+#form-registration > div > select {
+    width: 300px;
+    height: 35px;
+}
+
 
 /*-----------------RESPONSIVE-----------------*/
 
